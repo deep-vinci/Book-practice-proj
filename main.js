@@ -19,8 +19,17 @@ const myLibrary = [
     "kaiju preservation society"
 ];
 
-function Book() {
-    // the constructor...
+function Book(title, author, pages) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages
+    this.book = () => {
+        return {
+            title: this.title,
+            author: this.author,
+            pages: this.pages
+        }
+    }
 }
 
 function addBookToLibrary() {
@@ -31,17 +40,17 @@ function addBookToLibrary() {
 
 // addBookToLibrary();
 
-function displayBooks() {
-    myLibrary.forEach(book => {
-        let bookCard = document.createElement("div");
-        bookCard.classList.add("book-card");
-        bookCard.textContent = book;
-        container.appendChild(bookCard);;
-        console.log(book)
-    });
-}
+// function displayBooks() {
+//     myLibrary.forEach(book => {
+//         let bookCard = document.createElement("div");
+//         bookCard.classList.add("book-card");
+//         bookCard.textContent = book;
+//         container.appendChild(bookCard);;
+//         console.log(book)
+//     });
+// }
 
-displayBooks();
+// displayBooks();
 
 
 // "Show the dialog" button opens the dialog modally
@@ -60,11 +69,7 @@ closeButton.addEventListener("click", () => {
 
 dialogAddButton.addEventListener("click", event => {
     event.preventDefault();
-    window.returnValue = {
-        title: title.value,
-        author: author.value,
-        pages: pages.value,
-    };
+    window.returnValue = new Book(title.value, author.value,pages.value);
     dialog.close()
 })
 
@@ -73,8 +78,18 @@ dialog.addEventListener("close", () => {
     let bookCard = document.createElement("div");
     let title = document.createElement("h1");
     let author = document.createElement("h3");
-    let pages = document.createElement("h3"); 
+    let pages = document.createElement("h4"); 
+
     bookCard.classList.add("book-card");
-    bookCard.textContent = returnValue.title;
+    
+    title.textContent = returnValue.title;
+    author.textContent = returnValue.author;
+    pages.textContent = returnValue.pages;
     container.appendChild(bookCard);
+    bookCard.appendChild(title);
+    bookCard.appendChild(author);
+    bookCard.appendChild(pages);
 });
+
+let book1 = new Book("jk", "rowl", 213)
+console.log(book1.book())
