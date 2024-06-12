@@ -71,9 +71,10 @@ dialogAddButton.addEventListener("click", event => {
 dialog.addEventListener("close", () => {
     // console.log(returnValue)
     let bookCard = document.createElement("div");
+    let title = document.createElement("h1");
+    let author = document.createElement("h3");
+    let pages = document.createElement("h3"); 
     bookCard.classList.add("book-card");
     bookCard.textContent = returnValue.title;
     container.appendChild(bookCard);
-
-
 });
