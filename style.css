@@ -1,0 +1,80 @@
+* {
+    /* margin: 0; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 15px;
+}
+
+body {
+    margin: 0;
+}
+.container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-book-container {
+    width: 80vw;
+    display: flex;
+    margin: 10px;
+}
+
+.add-book-container button {
+    margin-left: auto;
+    padding: 10px 30px;
+}
+
+.book-card-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 80vw;
+}
+
+.book-card {
+    text-align: center;
+    background-color: pink;
+    padding: 20px;
+    width: 200px;
+    flex: 1 1 auto;
+}
+
+dialog form {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+dialog div {
+    display: flex;
+    flex-direction: row;
+}
+
+dialog div button {
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid rgb(190, 189, 189);
+    margin: 10px 0 10px 0;
+}
+
+form button {
+    padding: 10px;
+    border: 1px solid rgb(190, 189, 189);
+    margin: 10px 0 10px 0;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.356);
+}
