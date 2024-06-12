@@ -41,18 +41,18 @@ body {
     flex: 1 1 auto;
 }
 
-dialog form {
+.dialog form {
     width: 250px;
     display: flex;
     flex-direction: column;
 }
 
-dialog div {
+.dialog > div {
     display: flex;
     flex-direction: row;
 }
 
-dialog div button {
+.dialog div button {
     margin-left: auto;
     width: 30px;
     height: 30px;

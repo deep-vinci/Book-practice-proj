@@ -1,7 +1,7 @@
 const container = document.querySelector(".book-card-container");
 const addBook = document.querySelector(".add-book");
 
-const dialog = document.querySelector("dialog");
+const dialog = document.querySelector(".dialog");
 const closeButton = document.querySelector(".close button");
 
 // input box
@@ -74,5 +74,6 @@ dialog.addEventListener("close", () => {
     bookCard.classList.add("book-card");
     bookCard.textContent = returnValue.title;
     container.appendChild(bookCard);
+
 
 });
