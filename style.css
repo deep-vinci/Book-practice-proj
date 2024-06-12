@@ -30,7 +30,7 @@ body {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    width: 80vw;
+    width: min(800px, 80vw);
 }
 
 .book-card {
